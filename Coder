@@ -1,0 +1,68 @@
+ 1 /*##################BankOS###################*/                                                                                                  
+   2 /*银行系统开发流程                                                               
+   3  * 1、插卡                                                                       
+   4  * 2、输入金额                                                                   
+   5  * 3、选择服务                                                                   
+   6  *      1、取钱                                                                  
+   7  *         输入金额                                                              
+   8  *              -=金额                                                           
+   9  *      2、查询余额                                                              
+  10  * 4、显示余额                                                                   
+  11  * 5、退卡                                                                       
+  12  * *******************************************/                                  
+  13 import java.util.*;                                                              
+  14 import java.io.*;                                                                
+  15 import java.sql.*;                                                               
+  16                                                                                  
+  17 public class Bank{                                                               
+  18     public static void main(String[] args)throw Throwabke{                       
+  19         //System.out.println("please Insert Your Card!");                        
+  20         int a=Integer.parseInt(args[0]); //a为密码                               
+  21         int m;//总金额                                                           
+  22         int n;//要取金额                                                         
+  23         //int l;//剩余金额                                                       
+  24         System.out.println("插卡");                                              
+  25         ma(a);                                                                   
+  26         System.out.println("");                                                  
+  27     }                                                                            
+  28     static void ma(int a){                                                       
+  29         System.out.println("输入金额");                                          
+  30         m=-l;                                                                    
+  31                                                                                  
+  32         try{                                                                     
+  33             System.out.println("密码错误");                                      
+  34             mb(a);                                                               
+  35             System.out.println("ma 2");                                          
+  36                                                                                  
+  37         }                                                                        
+  38         catch(IOException e){                                                    
+  39             System.out.prinltn("密码错误！");                                    
+  40         }                                                                        
+  41         catch(SQLException e){                                                   
+  42             System.out.println("余额不足！");
+  43         }                                                                        
+  44         catch(Exception e){                                                      
+  45             System.out.println("错误！");                                        
+  46         }                                                                        
+  47         finally{                                                                 
+  48             System.out.println("收回卡！");                                      
+  49         }                                                                        
+  50                                                                                  
+  51         System.out.println("ma 3");                                              
+  52     }                                                                            
+  53     static void DrawM(int a)throw IOException{                                   
+  54         System.out.println("mb 1");                                              
+  55         mc(a);                                                                   
+  56         System.out.println("mb 2");                                              
+  57     }                                                                            
+  58     static void mc(int a)throw FileNotFoundException,EOFException,SQLException{  
+  59         System.out.println("mc 1");                                              
+  60         //if(a==0)throw new NullPointerException();                              
+  61         if(a==1)throw new FileNotFoundException();                               
+  62         if(a==2)throw new EOFException();                                        
+  63         if(a==3)throw new SQLException();                                        
+  64         System.out.println();                                                    
+  65     }                                                                            
+  66 }                                                                                                                                                
+Bank.java                                                                                                                           66,1          底端
+                                                                                                                                             
